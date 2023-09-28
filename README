@@ -1,0 +1,44 @@
+Convertidor CSV a XLSX
+
+Este proyecto permite convertir archivos CSV en el directorio actual a formato XLSX. El programa está escrito en Go y utiliza la biblioteca excelize.
+Historia
+
+El objetivo original era convertir archivos CSV con diferentes separadores (como ;, : y |) al formato XLSX. Durante el proceso de desarrollo, se abordaron los siguientes desafíos:
+
+    Detección automática del separador: Implementamos una función para detectar automáticamente el separador del archivo CSV basado en los primeros registros del archivo.
+
+    Manejo de líneas problemáticas: Se introdujo un manejo de errores para gestionar líneas que podrían tener un número incorrecto de campos. Estas líneas se omiten durante el proceso de conversión.
+
+    Generación de nombres de archivo específicos: El archivo XLSX generado tiene un nombre específico basado en el nombre original del archivo CSV, pero añadiendo un prefijo y un sufijo que contiene la fecha de generación.
+
+    Correcciones basadas en el feedback del usuario: Se ajustó la lógica para asegurar que todas las columnas se generen correctamente en el archivo XLSX.
+
+Instrucciones de Uso
+
+    Instalación de dependencias:
+    Antes de ejecutar el programa, instala la biblioteca excelize con:
+
+    bash
+
+go get github.com/xuri/excelize/v2
+
+Compilación:
+En la carpeta del proyecto, ejecuta:
+
+bash
+
+go build -o convertidor
+
+Ejecución:
+Para convertir todos los archivos CSV en el directorio actual, simplemente ejecuta:
+
+bash
+
+./convertidor
+
+Los archivos XLSX generados se guardarán en el mismo directorio con el prefijo "documento convertido", seguido del nombre original del archivo CSV (sin la extensión .csv) y un sufijo con la fecha de generación.
+
+Notas:
+
+    Asegúrate de que los archivos CSV en el directorio estén bien formados. Si hay líneas con un número incorrecto de campos, estas se omitirán.
+    Los separadores detectados automáticamente son ;, : y |. Si tu archivo utiliza un separador diferente, deberás ajustar el código.

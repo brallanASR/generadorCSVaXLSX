@@ -1,6 +1,6 @@
 📊 Convertidor CSV a XLSX
 
-Banner (Reemplaza path_to_image_banner.jpg con la ruta de una imagen que represente tu proyecto, si es que deseas agregar una)
+
 
 Una herramienta ligera y eficiente escrita en Go para convertir archivos CSV en el directorio actual a formato XLSX.
 🚀 Características
@@ -39,7 +39,7 @@ Si deseas ajustar la configuración del separador o agregar características adi
 
 ¡Las contribuciones son bienvenidas! Por favor, revisa las pautas de contribución y el código de conducta.
 
-(Puedes agregar archivos CONTRIBUTING.md y CODE_OF_CONDUCT.md si deseas tener guías de contribución y un código de conducta para tu proyecto.)
+
 📄 Licencia
 
 Distribuido bajo la licencia MIT. Consulta LICENSE para obtener más información.

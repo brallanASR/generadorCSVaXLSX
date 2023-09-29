@@ -1,44 +1,48 @@
-Convertidor CSV a XLSX
+📊 Convertidor CSV a XLSX
 
-Este proyecto permite convertir archivos CSV en el directorio actual a formato XLSX. El programa está escrito en Go y utiliza la biblioteca excelize.
-Historia
+Banner (Reemplaza path_to_image_banner.jpg con la ruta de una imagen que represente tu proyecto, si es que deseas agregar una)
 
-El objetivo original era convertir archivos CSV con diferentes separadores (como ;, : y |) al formato XLSX. Durante el proceso de desarrollo, se abordaron los siguientes desafíos:
+Una herramienta ligera y eficiente escrita en Go para convertir archivos CSV en el directorio actual a formato XLSX.
+🚀 Características
 
-    Detección automática del separador: Implementamos una función para detectar automáticamente el separador del archivo CSV basado en los primeros registros del archivo.
+    Detección Automática: Identifica automáticamente el separador del CSV (soporta ;, ,, y |).
+    Robusta: Ignora líneas problemáticas que no tienen el número esperado de campos.
+    Rápido: Convertido en segundos, incluso para archivos más grandes.
 
-    Manejo de líneas problemáticas: Se introdujo un manejo de errores para gestionar líneas que podrían tener un número incorrecto de campos. Estas líneas se omiten durante el proceso de conversión.
+📦 Instalación
 
-    Generación de nombres de archivo específicos: El archivo XLSX generado tiene un nombre específico basado en el nombre original del archivo CSV, pero añadiendo un prefijo y un sufijo que contiene la fecha de generación.
+    Preparación: Asegúrate de tener Go instalado en tu máquina.
+    Repositorio: Clona o descarga este repositorio.
+    Dependencias: Instala las dependencias necesarias con el siguiente comando:
 
-    Correcciones basadas en el feedback del usuario: Se ajustó la lógica para asegurar que todas las columnas se generen correctamente en el archivo XLSX.
-
-Instrucciones de Uso
-
-    Instalación de dependencias:
-    Antes de ejecutar el programa, instala la biblioteca excelize con:
-
-    bash
+bash
 
 go get github.com/xuri/excelize/v2
 
-Compilación:
-En la carpeta del proyecto, ejecuta:
+    Listo: ¡Estás listo para convertir!
+
+🖥️ Uso
+
+    Archivos CSV: Coloca todos tus archivos CSV en el mismo directorio que ConvertidorCSVaXLSX.go.
+    Ejecución: Lanza el programa usando:
 
 bash
 
-go build -o convertidor
+go run ConvertidorCSVaXLSX.go
 
-Ejecución:
-Para convertir todos los archivos CSV en el directorio actual, simplemente ejecuta:
+    Resultado: Los archivos XLSX resultantes tendrán el mismo nombre que los archivos CSV originales, pero con la extensión .xlsx.
 
-bash
+🛠️ Configuración
 
-./convertidor
+Si deseas ajustar la configuración del separador o agregar características adicionales, simplemente edita el archivo ConvertidorCSVaXLSX.go según tus necesidades.
+🤝 Contribuciones
 
-Los archivos XLSX generados se guardarán en el mismo directorio con el prefijo "documento convertido", seguido del nombre original del archivo CSV (sin la extensión .csv) y un sufijo con la fecha de generación.
+¡Las contribuciones son bienvenidas! Por favor, revisa las pautas de contribución y el código de conducta.
 
-Notas:
+(Puedes agregar archivos CONTRIBUTING.md y CODE_OF_CONDUCT.md si deseas tener guías de contribución y un código de conducta para tu proyecto.)
+📄 Licencia
 
-    Asegúrate de que los archivos CSV en el directorio estén bien formados. Si hay líneas con un número incorrecto de campos, estas se omitirán.
-    Los separadores detectados automáticamente son ;, : y |. Si tu archivo utiliza un separador diferente, deberás ajustar el código.
+Distribuido bajo la licencia MIT. Consulta LICENSE para obtener más información.
+📧 Contacto
+
+    Brallan Sanchez - bsanchez@redabierta.hn - @Brllsanchez93
